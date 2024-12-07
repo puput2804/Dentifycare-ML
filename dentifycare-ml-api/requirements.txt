@@ -1,7 +1,6 @@
-tensorflow
 fastapi
 uvicorn
-python-multipart
+tensorflow
 pillow
-matplotlib
 numpy
+google-cloud-storage
