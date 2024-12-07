@@ -61,10 +61,10 @@ async def predict(file: UploadFile = File(...)):
     try:
         # Read and preprocess the image
         image = Image.open(file.file)
-        image = image.resize((224, 224))  # Resize for InceptionV3 input size
+        image = image.resize((224, 224)) 
         image = np.array(image)
         image = np.expand_dims(image, axis=0)
-        image = preprocess_input(image)  # Preprocess the image for the model
+        image = preprocess_input(image)  # Inception V3 preprocess input
 
         # Perform prediction
         prediction = model.predict(image)
